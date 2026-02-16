@@ -1,0 +1,101 @@
+body { margin: 0; font-family: Arial, sans-serif; }
+/* Sidebar */
+.sidebar {
+	height: 100%;
+	width: 250px;
+	position: fixed;
+	top: 0;
+	left: 0; /* Visible by default */
+	background-color: #333;
+	color: white;
+	padding-top: 20px;
+	transition: 0.3s;
+}
+.sidebar a {
+	padding: 10px 20px;
+	display: block;
+	color: white;
+	text-decoration: none;
+}
+.sidebar a:hover {
+	background-color: #575757;
+}
+
+/* content/tab panes */
+.content { display: none; margin-left: 250px; padding: 12px; }
+.content.active { display: block; }
+/* Button */
+.toggle-btn {
+	display: none; /* hide toggle when sidebar is always open */
+}
+/* Keep .sidebar.open rule for compatibility */
+.sidebar.open {
+	left: 0;
+}
+.box {
+	/* fill available main area to the right of the sidebar */
+	width: calc(100% - 260px);
+	/* allow larger layouts on wide screens */
+	min-height: 240px;
+	background-color: #57abc7;
+	border: 1px solid #ccc;
+	padding: 20px;
+	margin-top: 16px;
+	font-family: monospace;
+	border-radius: 14px;
+	box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+.box h3 { margin: 0 0 12px 0; font-size: 20px; }
+.box-input { display: flex; gap: 12px; margin-bottom: 12px; }
+.box-input-field { flex: 1; padding: 10px; border: 1px solid #ccc; border-radius: 6px; font-size: 14px; }
+.box-add-btn { padding: 8px 12px; background: #1976d2; color: #fff; border: none; border-radius: 6px; cursor: pointer; }
+.box-list { list-style: none; padding: 0; margin: 0; max-height: 320px; overflow-y: auto; }
+.box-item { padding: 10px 8px; border-bottom: 1px solid rgba(0,0,0,0.06); cursor: pointer; font-size: 15px; }
+.box-item.done { text-decoration: line-through; color: #444; opacity: 0.8; }
+
+/* remove button for individual notifications */
+.remove-btn {
+	float: right;
+	background: transparent;
+	border: none;
+	color: #999;
+	font-weight: bold;
+	cursor: pointer;
+}
+.remove-btn:hover { color: #e53935; }
+
+/* Task manager styles */
+.task-manager {
+	width: calc(100% - 260px);
+	background: #fafafa;
+	border: 1px solid #ddd;
+	padding: 12px;
+	margin-top: 12px;
+}
+.task-manager h2 {
+	margin: 0 0 8px 0;
+	font-size: 18px;
+}
+.task-input {
+	display: flex;
+	gap: 8px;
+	margin-bottom: 8px;
+}
+.task-input input {
+	flex: 1;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+.task-input button {
+	padding: 8px 12px;
+	border: none;
+	background: #4caf50;
+	color: white;
+	border-radius: 3px;
+	cursor: pointer;
+}
+#taskList { list-style: none; padding: 0; margin: 0; }
+.task-item { padding: 6px 8px; border-bottom: 1px solid #eee; cursor: pointer; }
+.task-item.done { text-decoration: line-through; color: #888; }

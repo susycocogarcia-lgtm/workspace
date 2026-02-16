@@ -1,0 +1,5 @@
+[
+  { "title": "System Update", "body": "Updates installed successfully." },
+  { "title": "Backup Complete", "body": "Your files were backed up." },
+  { "title": "Battery", "body": "Battery charged to 100%." }
+]

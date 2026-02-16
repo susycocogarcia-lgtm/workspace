@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button class="toggle-btn" onclick="toggleSidebar()">☰ Menu</button>
+    <div class="sidebar" id="sidebar"> <a href="#">Home</a>
+        <a href="#about">About</a> <a href="#projects">Projects</a>
+        <a href="#project-manager">Project Manager</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <div id="dashboard" class="content">
+        <h1>Dashboard</h1>
+        <div class="box" id="box-projects">
+        <h3>Finished Projects</h3>
+        <div class="box-input">
+            <input class="box-input-field" type="text" placeholder="Add finished project..." />
+            <button class="box-add-btn">Add</button>
+        </div>
+        <ul class="box-list"></ul>
+    </div>
+
+    <div class="box" id="box-bills">
+        <h3>Bills Due</h3>
+        <div class="box-input">
+            <input class="box-input-field" type="text" placeholder="Add bill..." />
+            <button class="box-add-btn">Add</button>
+        </div>
+        <ul class="box-list"></ul>
+    </div>
+
+    <div class="box" id="box-meetings">
+        <h3>Upcoming Meetings</h3>
+        <div class="box-input">
+            <input class="box-input-field" type="text" placeholder="Add meeting..." />
+            <button class="box-add-btn">Add</button>
+        </div>
+        <ul class="box-list"></ul>
+    </div>
+
+    <div class="box" id="box-notifs">
+        <h3>Recent Notifications</h3>
+        <div class="box-input">
+            <input class="box-input-field" type="text" placeholder="Add notification..." />
+            <button class="box-add-btn">Add</button>
+            <button id="sysNotifyBtn" class="box-add-btn">From computer</button>
+            <button id="clearNotifsBtn" class="box-add-btn">Clear All</button>
+        </div>
+        <ul class="box-list"></ul>
+    </div>
+
+    <!-- removed duplicate About block (kept as tab below) -->
+
+    <!-- Task Manager -->
+    <div class="task-manager">
+        <h2>Task Manager</h2>
+        <div class="task-input">
+            <input id="taskInput" type="text" placeholder="Type a task and press Add or Enter" />
+            <button id="addTaskBtn">Add</button>
+        </div>
+        <ul id="taskList"></ul>
+    </div>
+
+    </div>
+
+    <!-- About section (tab) -->
+    <div id="about" class="content">
+        <div class="box">
+            <h3>About</h3>
+            <p><strong>My dashboard</strong> — version 1.0</p>
+            <p>Author: susycocogarcia</p>
+            <p>Small dashboard that tracks tasks, projects, bills and notifications.</p>
+            <p>Built: February 2026</p>
+        </div>
+    </div>
+
+    <!-- Projects tab -->
+    <div id="projects" class="content">
+        <div class="box">
+            <h3>Projects</h3>
+            <div class="box-input">
+                <input id="projectName" class="box-input-field" type="text" placeholder="Project name" />
+                <input id="projectDesc" class="box-input-field" type="text" placeholder="Project description (optional)" />
+                <button id="addProjectBtn" class="box-add-btn">Add Project</button>
+            </div>
+            <ul id="projectList" class="box-list"></ul>
+        </div>
+    </div>
+
+    <!-- Project Manager (separate detailed section) -->
+    <div id="project-manager" class="content">
+        <div class="box">
+            <h3>Project Manager</h3>
+            <div class="box-input">
+                <input id="pmName" class="box-input-field" type="text" placeholder="Project name" />
+                <input id="pmDesc" class="box-input-field" type="text" placeholder="Project description (optional)" />
+                <button id="pmAddBtn" class="box-add-btn">Add Project</button>
+            </div>
+            <ul id="pmList" class="box-list"></ul>
+        </div>
+    </div>
+
+    <!-- Contact tab placeholder -->
+    <div id="contact" class="content">
+        <div class="box">
+            <h3>Contact</h3>
+            <p>contact <a href="mailto:susycocogarcia@gmail.com">susycocogarcia@gmail.com</a></p>
+        </div>
+    </div>
+
+    <script> function toggleSidebar() { document.getElementById("sidebar").classList.toggle("open"); } </script>
+    <script src="index.js"></script>
+</body>
+</html>
